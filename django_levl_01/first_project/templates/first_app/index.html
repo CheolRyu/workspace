@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <title>Django level 2</title>
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+  <h1>Hi this is a picture of me</h1>
+  <img src="{% static 'images/IMG_5494.JPG' %}" alt="my image" width="auto" height="250">
+  <h1>Welcome to django level two</h1>
+  <div class="djangotwo">
+    {% if access_records %}
+    <table>
+      <caption>table title and/or explanatory text</caption>
+      <thead>
+        <tr>
+          <th>Site name</th>
+          <th>Date accessed</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for acc in access_records %}
+        <tr>
+          <td colspan="" rowspan="" headers="">{{acc.name}}</td>
+          <td colspan="" rowspan="" headers="">{{acc.date}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p>No Access record found</p>
+    {% endif %}
+  </div>
+</body>
+
+</html>

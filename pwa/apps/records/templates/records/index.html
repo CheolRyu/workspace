@@ -1,0 +1,39 @@
+{% extends "records/record_base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% block body_content %}
+<section class="feature-area section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="page-title text-center">
+          <h5 class="title white-color">Your personalized</h5>
+          <h3 class="white-color">RECORDS</h3>
+          <div class="space-60"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="team-slide">
+          {% if record_user %}
+          {% for record in user_record %}
+          <div class="team-box gray-color" style="background-color: #fff !important;">
+            <div class="team-image">
+              <img src="{% static 'images/team-1.png'%}" alt="">
+            </div>
+            <h4>{{record.user.username|title}}</h4>
+            <h6 class="position">{{record.title|title}}</h6>
+            <p>{{record.surgery_history}}</p>
+            <a href="{% url 'records:single' username=record.user.username pk=record.pk%}" class="bttn-default">View Detail</a>
+          </div>
+          {% endfor %}
+          {% else %}
+          You do not have any records. Please go ahead and create one.
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body_content %}

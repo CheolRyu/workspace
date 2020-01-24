@@ -1,0 +1,21 @@
+{% extends "records/record_base.html" %}
+{% load static bootstrap4 %}
+{% block record_content %}
+<section class="feature-area overlay section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-8 col-sm-offset">
+        <h3 class="white-color">Create New Record</h3>
+        <div class="space-20"></div>
+        <div class="subscribe-form dark-color">
+          <form action="{% url 'records:create'%}" method="POST" accept-charset="utf-8">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit" value="Cerate" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock record_content %}

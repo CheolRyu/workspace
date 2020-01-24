@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <title>PWA | Detail</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/personal_info/style.css'%}">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header-tag">
+      <h1 class="title">Let's take things step by step!</h1>
+      <h2 class="subtitle">First, tell us gerneral information about you so that we can determine either you quilify to take the survey.</h2>
+    </div>
+    <form>
+      <ul class="items"></ul>
+      <fieldset class="username enable">
+        <div class="icon left"><i class="user"></i></div>
+        <input type="text" name="username" placeholder="Username" />
+        <div class="icon right button"><i class="arrow"></i></div>
+      </fieldset>
+      <fieldset class="email">
+        <div class="icon left"><i class="letter"></i></div>
+        <input type="mail" name="email" placeholder="Email" />
+        <div class="icon right button"><i class="arrow"></i></div>
+      </fieldset>
+      <fieldset class="password">
+        <div class="icon left"><i class="lock"></i></div>
+        <input type="password" name="password" placeholder="Password" />
+        <div class="icon right button"><i class="arrow"></i></div>
+      </fieldset>
+      <fieldset class="thanks">
+        <div class="icon left"><i class="heart"></i></div>
+        <p>Thanks for your time</p>
+        <div class="icon right"><i class="heart"></i></div>
+      </fieldset>
+    </form>
+  </div>
+  <script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>

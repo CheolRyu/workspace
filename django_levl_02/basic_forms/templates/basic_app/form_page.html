@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Form</title>
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Fillout the form!</h1>
+    <form method="post" accept-charset="utf-8">
+      {{form.as_p}}
+      {% csrf_token %}
+      <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>

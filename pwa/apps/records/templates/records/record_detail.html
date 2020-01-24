@@ -1,0 +1,38 @@
+{% extends "records/record_base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% block post_record %}
+<section class="section-padding feature-area overlay" id="price_page">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="page-title text-center">
+          <h5 class="title white-color">Your record</h5>
+          <h3 class="dark-color white-color">Detail</h3>
+          <div class="space-60"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-8">
+        <div class="price-box" style="background-color: #fff !important;">
+          <div class="price-header">
+            <h4 class="upper">{{user_record.title | title}}</h4>
+          </div>
+          <div class="price-body">
+            <ul>
+              <li>Gender: {{user_record.sex | title}}</li>
+              <li>Age: {{user_record.age}}</li>
+              <li>Emergency Contact: {{ user_record.phone}}</li>
+              <li>Medical History: {{ user_record.surgery_history |title}}</li>
+            </ul>
+          </div>
+          <div class="price-footer">
+            <a href="#" class="bttn-white">Edit</a>
+          </div>
+          <div class="space-30 hidden visible-xs"></div>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock post_record %}

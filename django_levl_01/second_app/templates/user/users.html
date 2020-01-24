@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Users</title>
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Plase sign up here</h1>
+    <div class="jumbotron">
+      <form method="POST" accept-charset="utf-8">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger btn-round" value="Submit">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
